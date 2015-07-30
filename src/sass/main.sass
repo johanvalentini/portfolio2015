@@ -22,8 +22,11 @@ body
 	height: 100%
 	background-color: #fffffa
 	
+	-webkit-transform: translate3d(0,0,0)
 	transform: translate3d(0,0,0)
+	-webkit-transform-origin: top left
 	transform-origin: top left
+	-webkit-transition: -webkit-transform .5s cubic-bezier(0.230, 1.000, 0.320, 1.000)
 	transition: transform .5s cubic-bezier(0.230, 1.000, 0.320, 1.000)
 
 	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2)
@@ -45,6 +48,7 @@ body
 	z-index: 1
 	&--portfolio
 		margin-top: 40vh
+		-webkit-transition: -webkit-transform 1s cubic-bezier(0.230, 1.000, 0.320, 1.000)
 		transition: transform 1s cubic-bezier(0.230, 1.000, 0.320, 1.000)
 		
 				
@@ -61,13 +65,16 @@ body
 
 .is-open
 		.header
+			-webkit-transform: translate3d(0,-90vh,0)
 			transform: translate3d(0,-90vh,0)
 
 		.title
+			-webkit-transform: translate3d(0,2vh,0)
 			transform: translate3d(0,2vh,0)
 			font-size: 2rem
 
 		.section--portfolio
+			-webkit-transform: translate3d(0,0,0)
 			transform: translate3d(0,0,0)
 			
 
