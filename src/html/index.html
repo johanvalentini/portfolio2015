@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Johan Valentini - digital craftsman</title>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Playfair+Display:900' rel='stylesheet' type='text/css'> -->
+
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<header class="header">
+		<h1 class="title">Johan Valentini</h1>	
+	</header>
+	
+	<section class="section section--portfolio">
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+	</section>
+	<script>
+		var headerOpen = false;
+		var scrollElement = null;
+
+		if(navigator.userAgent.toLowerCase().indexOf('firefox') !== -1){
+			scrollElement = document.documentElement;
+		} else {
+			scrollElement = document.body;
+		}
+
+		function onScrollEvent() {
+			
+			if(!headerOpen && scrollElement.scrollTop > 100){
+				scrollElement.classList.add("is-open")
+				headerOpen = true
+			} else if(headerOpen && scrollElement.scrollTop < 100) {
+				scrollElement.classList.remove("is-open")
+				headerOpen = false
+			}
+		}
+		
+		
+		window.addEventListener("scroll", onScrollEvent)
+	</script>
+	<script>
+		(function(d) {
+		var config = {
+		kitId: 'zom2gzd',
+		scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+</script>
+</body>
+</html>
