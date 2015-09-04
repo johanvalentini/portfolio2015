@@ -1,12 +1,27 @@
+canvas {
+  display: block;
+  vertical-align: bottom; }
+
+/* ---- stats.js ---- */
+/* ---- particles.js container ---- */
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #111; }
+
 * {
   box-sizing: border-box; }
 
 body {
   margin: 0;
   padding: 0;
+  font-size: 20px;
   font-family: 'kepler-std-display', sans-serif;
-  background-color: #fffffa;
+  background-color: #111;
   height: 100%; }
+
+h1 {
+  margin: 0; }
 
 .header {
   z-index: 2;
@@ -15,19 +30,32 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fffffa;
+  background-color: #111;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   -webkit-transform-origin: top left;
   transform-origin: top left;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.32, 0, 0.01, 0.98);
+  transition: transform 0.3s cubic-bezier(0.32, 0, 0.01, 0.98);
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); }
+  .header__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -moz-radial-gradient(center, ellipse cover, transparent 0%, rgba(0, 0, 0, 0.41) 31%, black 99%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, transparent), color-stop(31%, rgba(0, 0, 0, 0.41)), color-stop(99%, black));
+    background: -webkit-radial-gradient(center, ellipse cover, transparent 0%, rgba(0, 0, 0, 0.41) 31%, black 99%);
+    background: -o-radial-gradient(center, ellipse cover, transparent 0%, rgba(0, 0, 0, 0.41) 31%, black 99%);
+    background: -ms-radial-gradient(center, ellipse cover, transparent 0%, rgba(0, 0, 0, 0.41) 31%, black 99%);
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.41) 31%, black 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); }
 
 .title {
   position: absolute;
   bottom: 5vh;
-  color: #112;
+  color: #fff;
   z-index: 3;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   padding: 10vh 50px 0;
@@ -65,7 +93,7 @@ body {
   transform: translate3d(0, 0, 0); }
 
 @media screen and (min-width: 600px) {
-  .title {
+  h1 {
     font-size: 4rem; }
   .item {
     width: 33.33%;

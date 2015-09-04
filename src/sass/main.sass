@@ -1,3 +1,5 @@
+@import "components/_particles"
+
 // $blue: #2347D9
 $blue: #0062CA
 
@@ -8,11 +10,15 @@ $blue: #0062CA
 body
 	margin: 0
 	padding: 0
+	font-size: 20px
 	font-family: 'kepler-std-display', sans-serif
-	background-color: #fffffa
+	background-color: #111
 	
 	height: 100%
-	
+
+h1
+	margin: 0
+
 .header
 	z-index: 2
 	position: fixed
@@ -20,22 +26,36 @@ body
 	left: 0
 	width: 100%
 	height: 100%
-	background-color: #fffffa
+	background-color: #111
 	
 	-webkit-transform: translate3d(0,0,0)
 	transform: translate3d(0,0,0)
 	-webkit-transform-origin: top left
 	transform-origin: top left
-	-webkit-transition: -webkit-transform .5s cubic-bezier(0.230, 1.000, 0.320, 1.000)
-	transition: transform .5s cubic-bezier(0.230, 1.000, 0.320, 1.000)
+	-webkit-transition: -webkit-transform .3s cubic-bezier(.32,0,.01,.98)
+	transition: transform .3s cubic-bezier(.32,0,.01,.98)
 
 	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2)
+
+	&__overlay
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.41) 31%, rgba(0,0,0,1) 99%)
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(31%,rgba(0,0,0,0.41)), color-stop(99%,rgba(0,0,0,1)))
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.41) 31%,rgba(0,0,0,1) 99%)
+		background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.41) 31%,rgba(0,0,0,1) 99%)
+		background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.41) 31%,rgba(0,0,0,1) 99%)
+		background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.41) 31%,rgba(0,0,0,1) 99%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 )
 	
 
 .title
 	position: absolute
 	bottom: 5vh
-	color: #112
+	color: #fff
 	z-index: 3
 	transition: all .5s cubic-bezier(0.230, 1.000, 0.320, 1.000)
 	padding: 10vh 50px 0
@@ -57,7 +77,7 @@ body
 
 .item
 	background-color: darken(#1a1a1b, 10%)
-	float: left;
+	float: left
 	border-radius: 50%
 	overflow: hidden
 	width: 100vw
@@ -81,7 +101,7 @@ body
 @media screen and (min-width: 600px)
 	.header
 	
-	.title
+	h1
 		font-size: 4rem
 	.item
 		width: 33.33%
