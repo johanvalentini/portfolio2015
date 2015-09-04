@@ -57,11 +57,14 @@ h1
 	bottom: 5vh
 	color: #fff
 	z-index: 3
-	transition: all .5s cubic-bezier(0.230, 1.000, 0.320, 1.000)
+	transition: opacity 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000), transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000)
 	padding: 10vh 50px 0
 	line-height: 1
 	margin: 0
 	font-weight: normal
+	opacity: 0
+	transform: translate(0,30px)
+	
 
 .section
 	width: 100%
@@ -106,4 +109,7 @@ h1
 	.item
 		width: 33.33%
 		height: 33.33vw
-	
+
+.wf-active .title
+	opacity: 1
+	transform: translate(0,0)
