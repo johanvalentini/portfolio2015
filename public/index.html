@@ -16,37 +16,44 @@
 		<div id="title" class="title">
 			<h1>Johan Valentini</h1>	
 			<p>Digital artisan</p>
+			<p><a href="mailto:johan@johanvalentini.co">johan@johanvalentini.co</a></p>
 		</div>
-		
-		
 	</header>
 	
-	<section class="section section--portfolio">
-
-	</section>
+	<!-- <section class="section section--portfolio">
+		<div style="width: 50%; height: 200px;"></div>
+		<div style="width: 50%; height: 200px;"></div>
+		<div style="width: 50%; height: 200px;"></div>
+		<div style="width: 50%; height: 200px;"></div>
+		<div style="width: 50%; height: 200px;"></div>
+		<div style="width: 50%; height: 200px;"></div>
+		<div style="width: 50%; height: 200px;"></div>
+		<div style="width: 50%; height: 200px;"></div>
+		<div style="width: 50%; height: 200px;"></div>
+	</section> -->
 	<script>
-		var headerOpen = false;
-		var scrollElement = null;
+		// var headerOpen = false;
+		// var scrollElement = null;
 
-		if(navigator.userAgent.toLowerCase().indexOf('firefox') !== -1){
-			scrollElement = document.documentElement;
-		} else {
-			scrollElement = document.body;
-		}
+		// if(navigator.userAgent.toLowerCase().indexOf('firefox') !== -1){
+		// 	scrollElement = document.documentElement;
+		// } else {
+		// 	scrollElement = document.body;
+		// }
 
-		function onScrollEvent() {
+		// function onScrollEvent() {
 			
-			if(!headerOpen && scrollElement.scrollTop > 100){
-				scrollElement.classList.add("is-open")
-				headerOpen = true
-			} else if(headerOpen && scrollElement.scrollTop < 100) {
-				scrollElement.classList.remove("is-open")
-				headerOpen = false
-			}
-		}
+		// 	if(!headerOpen && scrollElement.scrollTop > 100){
+		// 		scrollElement.classList.add("is-open")
+		// 		headerOpen = true
+		// 	} else if(headerOpen && scrollElement.scrollTop < 100) {
+		// 		scrollElement.classList.remove("is-open")
+		// 		headerOpen = false
+		// 	}
+		// }
 		
 		
-		window.addEventListener("scroll", onScrollEvent)
+		// window.addEventListener("scroll", onScrollEvent)
 		
 	</script>
 	<script src="/js/particles.min.js"></script>
@@ -54,60 +61,9 @@
 
 
 		particlesJS.load('particles-js', '/js/particles.json', function() {
-		  console.log('callback - particles.js config loaded');
+		  
 		});
-		// particlesJS('particles-js', {
-		// 	canvas: {
-		// 		color_hex_bg: '#15414e',
-		// 		opacity: 0.5
-		// 	},
-		// 	particles: {
-		// 	  color: '#fff',
-		// 	  shape: 'circle',
-		// 	  opacity: 0.5,
-		// 	  size: 2.5,
-		// 	  size_random: true,
-		// 	  nb: 100,
-		// 	  line_linked: {
-		// 	    enable_auto: true,
-		// 	    distance: 100,
-		// 	    color: '#fff',
-		// 	    opacity: 1,
-		// 	    width: 1,
-		// 	    condensed_mode: {
-		// 	      enable: false,
-		// 	      rotateX: 65000,
-		// 	      rotateY: 65000
-		// 	    }
-		// 	  },
-		// 	  anim: {
-		// 	    enable: true,
-		// 	    speed: 1
-		// 	  },
-		// 	  array: []
-		// 	  },
-		// 	  interactivity: {
-		// 	    enable: true,
-		// 	    mouse: {
-		// 	      distance: 100
-		// 	    },
-		// 	    detect_on: 'window',
-		// 	    event: {
-		// 	    	onclick: {
-		// 	    		enable: true,
-		// 	    		mode: 'push'
-		// 	    	}
-		// 	    },
-		// 	    mode: 'grab'
-		// 	  },
-		// 	  retina_detect: true,
-		// 	  fn: {
-		// 	    vendors:{
-		// 	      interactivity: {}
-		// 	    }
-		// 	},
-		// 	retina_detect: true
-		// });
+		
 	</script>
 	<script>
 		(function(d) {
@@ -120,10 +76,12 @@
 	</script>
 	<script>
 		// Boot
-		// document.addEventListener("DOMContentLoaded", function(){
-		// 	document.getElementById('title').classList.add('is-shown')
-		// 	// setTimeout(function() {}, 100);
-		// })
+		document.addEventListener("DOMContentLoaded", function(){
+			
+			setTimeout(function() {
+				document.getElementById('title').classList.add('is-shown')
+			}, 500);
+		})
 
 	</script>
 </body>
