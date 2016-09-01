@@ -1,0 +1,21 @@
+{
+  "name": "portfolio2015",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johanvalentini/portfolio2015.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/johanvalentini/portfolio2015#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-server-livereload": "^1.8.2"
+  }
+}
