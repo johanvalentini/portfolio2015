@@ -68,6 +68,9 @@ a {
   font-weight: normal;
   opacity: 0;
   transform: translate(0, 30px); }
+  .title.is-open {
+    opacity: 1;
+    transform: translate(0, 0); }
 
 .section {
   width: 100%;
@@ -104,7 +107,3 @@ a {
   .item {
     width: 33.33%;
     height: 33.33vw; } }
-
-.wf-active .title.is-shown {
-  opacity: 1;
-  transform: translate(0, 0); }
