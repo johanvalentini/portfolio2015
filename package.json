@@ -4,12 +4,13 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "dev": "gulp watch",
+    "watch": "gulp watch",
+    "build": "gulp build",
     "build:sass": "gulp compile-sass"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/johanvalentini/portfolio2015.git"
+    "url": "git+https://github.com/johanvalentini/portfolio2015.git",
+    "type": "git"
   },
   "author": "",
   "license": "ISC",

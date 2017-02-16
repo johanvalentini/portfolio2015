@@ -31,3 +31,7 @@ gulp.task('start-server', function() {
 gulp.task('watch', ['start-server', 'move-html', 'compile-sass', 'move-assets'], function() {
 	gulp.watch('./src/**/*', ['move-html','compile-sass', 'move-assets'])
 })
+
+gulp.task('build', ['move-html', 'compile-sass', 'move-assets'], function() {
+	// gulp.watch('./src/**/*', ['move-html','compile-sass', 'move-assets'])
+})
