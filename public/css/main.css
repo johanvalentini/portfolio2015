@@ -68,7 +68,7 @@ a {
   font-weight: normal;
   opacity: 0;
   transform: translate(0, 30px); }
-  .title.is-open {
+  .title.is-shown {
     opacity: 1;
     transform: translate(0, 0); }
 
