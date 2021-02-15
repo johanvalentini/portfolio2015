@@ -39,23 +39,15 @@ var i;
 var theta, phi;
 var x0, y0, z0;
 
-    
-// init();
-
 function init() {
     wait = 3;
     count = wait - 1;
     if(window.innerWidth > 768) {
 
-        numToAddEachFrame = 10;
+        numToAddEachFrame = 12;
     } else {
         numToAddEachFrame = 6;
     }
-    
-    //particle color
-    // r = 70;
-    // g = 255;
-    // b = 140;
 
     r = 101
     g = 84
@@ -67,7 +59,7 @@ function init() {
     displayWidth = theCanvas.width = theCanvasContainer.offsetWidth//window.innerWidth;//theCanvas.width;
     displayHeight = theCanvas.height = theCanvasContainer.offsetHeight//window.innerHeight;
     
-    fLen = 600; //represents the distance from the viewer to z=0 depth.
+    fLen = 300; //represents the distance from the viewer to z=0 depth.
     
     //projection center coordinates sets location of origin
     projCenterX = displayWidth/2;
@@ -116,15 +108,11 @@ function onTimer() {
         // Get ready for next frame by setting then=now, but also adjust for your
         // specified fpsInterval not being a multiple of RAF's interval (16.7ms)
         
-
-        // Put your drawing code here
         return;
         
     }
     then = now - (elapsed % fpsInterval);
-    // console.log('frame')
     
-
     //if enough time has elapsed, we will add new particles.        
     count++;
         if (count >= wait) {
@@ -165,8 +153,8 @@ function onTimer() {
     cosAngle = Math.cos(turnAngle);
 
     //background fill
-    // context.fillStyle = "#0a0918";
-    context.fillStyle = "#000";
+    context.fillStyle = "#040312";
+    // context.fillStyle = "#000";
     context.fillRect(0,0,displayWidth,displayHeight);
     
     //update and draw particles
