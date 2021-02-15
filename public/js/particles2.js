@@ -39,9 +39,6 @@ var i;
 var theta, phi;
 var x0, y0, z0;
 
-    
-// init();
-
 function init() {
     wait = 3;
     count = wait - 1;
@@ -51,11 +48,6 @@ function init() {
     } else {
         numToAddEachFrame = 6;
     }
-    
-    //particle color
-    // r = 70;
-    // g = 255;
-    // b = 140;
 
     r = 101
     g = 84
