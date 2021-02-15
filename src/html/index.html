@@ -4,41 +4,31 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
-	<title>Johan Valentini - digital artisan</title>
-	<link rel="stylesheet" href="/css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+	<title>Johan Valentini - Pixel pusher</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet"> -->
 </head>
 <body>
-	<header class="header">
-		<div class="header__overlay"></div>
-		<div id="particles-js"></div>
+	<main class="main">
+		<div class="main__overlay"></div>
+        <div id="particles-js">
+            <canvas id="particles-js-canvas"></canvas>
+        </div>
 		<div id="title" class="title">
 			<h1>Johan Valentini</h1>	
-			<p>Digital artisan</p>
-			<p><a href="mailto:johan@johanvalentini.co">johan@johanvalentini.co</a></p>
+			<p>Pixel pusher</p>
+			<p><a href="mailto:j@johanvalentini.com">j@johanvalentini.com</a></p>
 		</div>
-	</header>
-	
-	
-	<script src="/js/particles.min.js"></script>
+	</main>
+    <script src="js/particles2.js"></script>
+	<!-- <script src="/js/particles.min.js"></script>
+	<script>particlesJS.load('particles-js', '/js/particles.json');</script> -->
 	<script>
-
-
-		particlesJS.load('particles-js', '/js/particles.json', function() {
-		  
-		});
-		
-	</script>
-	
-	<script>
-		// Boot
 		document.addEventListener("DOMContentLoaded", function(){
-			
 			setTimeout(function() {
 				document.getElementById('title').classList.add('is-shown')
-			}, 500);
+			}, 1500);
 		})
-
 	</script>
 </body>
 </html>

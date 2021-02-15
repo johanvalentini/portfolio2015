@@ -1,24 +1,18 @@
 {
   "name": "portfolio2015",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "gulpfile.js",
   "scripts": {
-    "watch": "gulp watch",
-    "build": "gulp build",
-    "deploy": "git commit -am 'deploy' && git push",
-    "build:sass": "gulp compile-sass"
+    "build": "sass --style=compressed src/sass/main.sass public/css/main.css && cp src/html/* public/ && cp src/assets/js/* public/js/"
   },
   "repository": {
     "url": "git+https://github.com/johanvalentini/portfolio2015.git",
     "type": "git"
   },
-  "author": "",
+  "author": "Johan Valentini Jensen",
   "license": "ISC",
-  "homepage": "https://github.com/johanvalentini/portfolio2015#readme",
+  "homepage": "johanvalentini.com",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2",
-    "gulp-server-livereload": "^1.8.2"
+    "sass": "^1.*"
   }
 }
